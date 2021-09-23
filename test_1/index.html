@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Ressstttcipe</title>
+  </head>
+  <body class="bg-gray-200">
+    <main>
+      <!-- header start -->
+      <header
+        class="text-gray-800 text-2xl font-bold text-center uppercase my-4"
+      >
+        <h3>Ressstttcipe app</h3>
+      </header>
+      <!-- header end -->
+
+      <!-- menu start -->
+      <section class="text-center mx-8">
+        <nav>
+          <button
+            id="recipeListMenu"
+            class="text-gray-800 font-semibold hover:text-green-500 mr-5"
+          >
+            Recipe List
+          </button>
+          <button
+            id="addRecipeMenu"
+            class="text-gray-800 font-semibold hover:text-green-500 mr-5"
+          >
+            Add Recipe
+          </button>
+          <button
+            id="addSpecialMenu"
+            class="text-gray-800 font-semibold hover:text-green-500"
+          >
+            Add Special
+          </button>
+        </nav>
+      </section>
+      <!-- menu end -->
+
+      <!-- list and preview start -->
+      <section id="mainPart" class="p-5 container mx-auto"></section>
+      <!-- list and preview end -->
+
+      <!-- add item start -->
+      <section id="addRecipeContainer" class="p-5 mx-auto max-w-lg hidden">
+        <h5 class="text-base font-semibold text-gray-800 mb-5">Add a Recipe</h5>
+        <form id="addRecipeForm" action="/">
+          <input
+            name="title"
+            type="text"
+            placeholder="title"
+            class="
+              py-2
+              px-4
+              mb-3
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <textarea
+            name="description"
+            placeholder="description"
+            rows="5"
+            class="
+              py-2
+              px-4
+              mb-3
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          ></textarea>
+          <input
+            name="servings"
+            type="number"
+            placeholder="servings"
+            class="
+              py-2
+              px-4
+              mb-3
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <input
+            name="prepTime"
+            type="number"
+            placeholder="preptime"
+            class="
+              py-2
+              px-4
+              mb-3
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <input
+            name="cookTime"
+            type="number"
+            placeholder="cooktime"
+            class="
+              py-2
+              px-4
+              mb-3
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <!-- ingre cont -->
+          <div class="ingredientsContainer">
+            <div
+              class="flex flex-row flex-wrap place-content-between mt-5 mb-1"
+            >
+              <p class="text-sm">Ingredients:</p>
+              <button
+                type="button"
+                id="addIngFields"
+                class="
+                  font-bold
+                  text-xs text-blue-700
+                  lowercase
+                  hover:text-blue-800
+                "
+              >
+                + Add Ingredient
+              </button>
+            </div>
+            <!-- the ingre -->
+            <div class="ingredientInput mt-2">
+              <input
+                name="amount"
+                type="number"
+                placeholder="amount"
+                class="
+                  py-2
+                  px-4
+                  mb-1
+                  focus:ring-indigo-500 focus:border-indigo-500
+                  block
+                  w-full
+                  shadow-sm
+                  sm:text-sm
+                  border-gray-300
+                  rounded-md
+                "
+              />
+              <input
+                name="measurement"
+                type="text"
+                placeholder="measurement"
+                class="
+                  py-2
+                  px-4
+                  mb-1
+                  focus:ring-indigo-500 focus:border-indigo-500
+                  block
+                  w-full
+                  shadow-sm
+                  sm:text-sm
+                  border-gray-300
+                  rounded-md
+                "
+              />
+              <input
+                name="name"
+                type="text"
+                placeholder="name"
+                class="
+                  py-2
+                  px-4
+                  mb-1
+                  focus:ring-indigo-500 focus:border-indigo-500
+                  block
+                  w-full
+                  shadow-sm
+                  sm:text-sm
+                  border-gray-300
+                  rounded-md
+                "
+              />
+            </div>
+          </div>
+
+          <!-- directions cont -->
+          <div class="directionsContainer">
+            <div
+              class="flex flex-row flex-wrap place-content-between mt-5 mb-1"
+            >
+              <p class="text-sm">Instructions:</p>
+              <button
+                type="button"
+                id="addDirFields"
+                class="
+                  font-bold
+                  text-xs text-blue-700
+                  lowercase
+                  hover:text-blue-800
+                "
+              >
+                + Add Direction
+              </button>
+            </div>
+
+            <!-- the direction -->
+            <div class="directionInput mt-2">
+              <input
+                name="instructions"
+                type="text"
+                placeholder="instructions"
+                class="
+                  py-2
+                  px-4
+                  mb-1
+                  focus:ring-indigo-500 focus:border-indigo-500
+                  block
+                  w-full
+                  shadow-sm
+                  sm:text-sm
+                  border-gray-300
+                  rounded-md
+                "
+              />
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="
+              py-2
+              px-4
+              mt-4
+              border border-transparent
+              text-sm
+              font-medium
+              rounded-md
+              text-white
+              bg-indigo-600
+              hover:bg-indigo-700
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-indigo-500
+            "
+          >
+            Add Recipe
+          </button>
+        </form>
+      </section>
+      <!-- add item end -->
+
+      <!-- add special start -->
+      <section id="addSpecialContainer" class="p-5 mx-auto max-w-lg hidden">
+        <h5 class="text-base font-semibold text-gray-800 mb-5">
+          Add a Special
+        </h5>
+        <form id="addSpecialForm">
+          <select
+            id="ingSelectInput"
+            name="ingredientId"
+            class="
+              py-2
+              px-4
+              mb-1
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          >
+            <option value="undefined" class="sm:text-sm text-gray-400">
+              select ingredient
+            </option>
+          </select>
+          <input
+            name="type"
+            type="text"
+            placeholder="type"
+            class="
+              py-2
+              px-4
+              mb-1
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <input
+            name="title"
+            type="text"
+            placeholder="title"
+            class="
+              py-2
+              px-4
+              mb-1
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <input
+            name="text"
+            type="text"
+            placeholder="description"
+            class="
+              py-2
+              px-4
+              mb-1
+              focus:ring-indigo-500 focus:border-indigo-500
+              block
+              w-full
+              shadow-sm
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
+          />
+          <button
+            type="submit"
+            class="
+              py-2
+              px-4
+              mt-4
+              border border-transparent
+              text-sm
+              font-medium
+              rounded-md
+              text-white
+              bg-indigo-600
+              hover:bg-indigo-700
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-indigo-500
+            "
+          >
+            Add Special
+          </button>
+        </form>
+      </section>
+      <!-- add special end -->
+
+      <!-- edit recipe form start -->
+      <section id="editRecipeContainer" class="p-5 mx-auto max-w-lg hidden">
+        <form id="editRecipeForm" action="/"></form>
+      </section>
+      <!-- edit recipe form end -->
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
