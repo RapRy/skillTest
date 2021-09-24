@@ -5,23 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <title>HTML Convertion</title>
   </head>
   <body>
     <!-- header start -->
     <header>
-      <div class="headerSubContainer pad-x-20 pad-y-10">
-        <div class="logoContainer">
-          <img src="./img/invesco-logo.png" alt="Invesco" />
-        </div>
-        <div class="burgMenuContainer">
-          <div class="burgMenu">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="innerContainer">
+        <div class="headerSubContainer pad-x-20">
+          <div class="logoContainer">
+            <img
+              class="transitionAll"
+              src="./img/invesco-logo.png"
+              alt="Invesco"
+            />
+            <div class="desktopLogoContainer">
+              <img src="./img/logo-withname.png" alt="logo" />
+            </div>
+            <div class="slogan">
+              <p>Reasearch Professional</p>
+              <h4>Platform</h4>
+            </div>
+          </div>
+          <div class="desktopMenu">
+            <a href="#" class="transitionAll">Home</a>
+            <a href="#" class="transitionAll">About Us</a>
+            <a href="#" class="transitionAll">Insights</a>
+            <a href="#" class="transitionAll">Events</a>
+            <a href="#" class="transitionAll">Contact Us</a>
+          </div>
+          <div class="burgMenuContainer">
+            <div class="burgMenu transitionAll">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
+      <section class="mobileTopNav transitionAll">
+        <div class="topNav pad-20 transitionAll">
+          <div class="sitemapHeader">
+            <p>Site Links</p>
+          </div>
+          <div class="topnavLinksContainer">
+            <a href="" class="containedButtonBase transitionAll">Home</a>
+            <a href="" class="containedButtonBase transitionAll">About Us</a>
+            <a href="" class="containedButtonBase transitionAll">Insights</a>
+            <a href="" class="containedButtonBase transitionAll">Events</a>
+            <a href="" class="containedButtonBase transitionAll"
+              >Due Dilligence</a
+            >
+            <a href="" class="containedButtonBase transitionAll">Contact Us</a>
+          </div>
+        </div>
+      </section>
     </header>
     <!-- header end -->
 
@@ -44,7 +85,7 @@
     <section class="slideArticles">
       <section class="innerContainer">
         <div class="pad-x-20">
-          <p>ACME <span>Insight</span></p>
+          <p class="headingStyle-1">ACME <span>Insight</span></p>
           <p>How are factors being used around the world?</p>
         </div>
         <div class="articleCardsContainer mar-t-20">
@@ -59,14 +100,14 @@
             <div class="articleImgContainer">
               <img src="./img/card-image-2.jpg" alt="card image 1" />
             </div>
-            <h4>Global Factor Investing Study</h4>
+            <h4>2019 Outlook</h4>
           </article>
 
           <article class="articleCard pad-20">
             <div class="articleImgContainer">
               <img src="./img/card-image-3.jpg" alt="card image 1" />
             </div>
-            <h4>Global Factor Investing Study</h4>
+            <h4>Capital Market Assumptions</h4>
           </article>
         </div>
         <div class="articleBulletsContainer mar-t-20">
@@ -92,5 +133,130 @@
       </section>
     </section>
     <!-- who we are end -->
+
+    <!-- events start -->
+    <section class="events">
+      <div class="innerContainer">
+        <div class="pad-x-20">
+          <p class="headingStyle-1">Upcoming <span>Events</span></p>
+          <p>
+            At ACME, we're dedicated to learn,ing connecting, and exploring
+            opportunities.
+          </p>
+        </div>
+        <div class="eventsCardsContainer mar-t-20">
+          <div class="eventCard active">
+            <div class="eventDate">
+              <div class="eventDateContainer">
+                <span class="eventDateMonth">Jan</span>
+                <span class="eventDateDate">28</span>
+              </div>
+            </div>
+            <div class="eventDetails">
+              <h4>Citywide Buyer’s Retreat</h4>
+              <p>
+                Find out how banks are responding to the changing future of
+                interest...
+              </p>
+              <a href="#" class="outlineButtonBase transitionAll"
+                >View Event Details</a
+              >
+            </div>
+            <div class="eventLocation">
+              <p>The Wagner New York</p>
+            </div>
+          </div>
+
+          <div class="eventCard">
+            <div class="eventDate">
+              <div class="eventDateContainer">
+                <span class="eventDateMonth">Feb</span>
+                <span class="eventDateDate">12</span>
+              </div>
+            </div>
+            <div class="eventDetails">
+              <h4>Insight Exchange Network</h4>
+              <p>Join us for this conference showcasing innovation...</p>
+              <a href="#" class="outlineButtonBase transitionAll"
+                >View Event Details</a
+              >
+            </div>
+            <div class="eventLocation">
+              <p>London England</p>
+            </div>
+          </div>
+
+          <div class="eventCard">
+            <div class="eventDate">
+              <div class="eventDateContainer">
+                <span class="eventDateMonth">Jan</span>
+                <span class="eventDateDate">28</span>
+              </div>
+            </div>
+            <div class="eventDetails">
+              <h4>Research Exchange</h4>
+              <p>Join us for this conference showcasing innovation...</p>
+              <a href="#" class="outlineButtonBase transitionAll"
+                >View Event Details</a
+              >
+            </div>
+            <div class="eventLocation">
+              <p>Chicago, IL</p>
+            </div>
+          </div>
+        </div>
+        <div class="eventsBulletsContainer mar-t-20">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="eventCompanyLogo">
+          <img src="./img/logo-noname.png" alt="logo" />
+        </div>
+      </div>
+    </section>
+    <!-- events end -->
+
+    <!-- footer sitemap start -->
+    <footer class="pad-20">
+      <div class="innerContainer">
+        <div class="desktopFooter">
+          <div class="information">
+            <p>Call us at 111-222-3333</p>
+            <p>for more information</p>
+          </div>
+          <div class="social">
+            <span>Social Share</span>
+            <a href=""><i class="fab fa-twitter transitionAll"></i></a>
+            <a href=""><i class="fab fa-facebook-f transitionAll"></i></a>
+            <a href=""><i class="fab fa-linkedin-in transitionAll"></i></a>
+            <a href=""><i class="fas fa-envelope transitionAll"></i></a>
+          </div>
+        </div>
+        <div class="privacyContainer">
+          <a href="" class="containedButtonBase transitionAll"
+            >Privacy Policy</a
+          >
+          <a href="" class="containedButtonBase transitionAll">Terms of Use</a>
+        </div>
+        <div class="sitemap">
+          <div class="sitemapHeader">
+            <p>Site Links</p>
+          </div>
+          <div class="sitemapLinksContainer">
+            <a href="" class="containedButtonBase transitionAll">Home</a>
+            <a href="" class="containedButtonBase transitionAll">About Us</a>
+            <a href="" class="containedButtonBase transitionAll">Insights</a>
+            <a href="" class="containedButtonBase transitionAll">Events</a>
+            <a href="" class="containedButtonBase transitionAll"
+              >Due Dilligence</a
+            >
+            <a href="" class="containedButtonBase transitionAll">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer sitemap end -->
+    <script src="script.js"></script>
   </body>
 </html>
