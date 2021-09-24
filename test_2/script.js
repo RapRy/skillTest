@@ -1,6 +1,6 @@
 const burgMenu = document.querySelector(".burgMenu");
 const mobileTopNav = document.querySelector(".mobileTopNav");
-const logoImg = document.querySelector(".logoContainer img")[0];
+const logoImg = document.querySelector(".logoContainer img");
 
 function slideLeft() {
   burgMenu.style.cssText =

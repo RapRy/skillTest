@@ -142,7 +142,7 @@ body {
 }
 
 .logoContainer img.active {
-  max-width: 16%;
+  height: 45px;
 }
 
 .desktopLogoContainer,
@@ -691,7 +691,7 @@ footer {
 
 /* top nav start */
 .mobileTopNav {
-  position: fixed;
+  position: absolute;
   top: 69px;
   left: 0px;
   background: var(--opacBlack);
